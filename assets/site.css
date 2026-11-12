@@ -1,41 +1,46 @@
 /* ==========================================================
    Rohith Gopinath — shared styles
-   Palette: cream paper, deep forest green, rust accent.
-   Academic pages use the green theme; personal pages use
-   the warm (rust) theme via <body class="theme-personal">.
+   Palette: deep bordeaux #3F0D12, soft blush #FBE4E3,
+   ruby red #9B111E and crimson silk #B5263E for touches.
+   Academic pages: bordeaux hero. Personal pages: blush hero,
+   via <body class="theme-personal">.
    ========================================================== */
 
 :root{
-  --paper:#f7f4eb;
-  --card:#fffcf4;
-  --ink:#24362c;
-  --muted:#5d6b61;
-  --line:#d8d5c6;
-  --deep:#294237;
-  --deep-2:#1b2d25;
-  --accent:#b65834;
-  --accent-soft:#f1e2d3;
-  --on-deep:#fff9e9;
-  --on-deep-muted:#d6dcb4;
+  --bordeaux:#3F0D12;
+  --blush:#FBE4E3;
+  --ruby:#9B111E;
+  --crimson:#B5263E;
+  --paper:#FDF4F3;
+  --card:#FFFBFA;
+  --ink:#3F0D12;
+  --muted:#7A4D52;
+  --line:#EDCFCD;
+  --deep:#3F0D12;
+  --deep-2:#2A080C;
+  --accent:#9B111E;
+  --accent-soft:#FBE4E3;
+  --on-deep:#FBE4E3;
+  --on-deep-muted:#E9A9AE;
   --serif:"Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif;
   --sans:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
   --mono:ui-monospace,"SF Mono",Menlo,Consolas,monospace;
   --radius:12px;
 }
 .theme-personal{
-  --deep:#7a3a22;
-  --deep-2:#57281a;
-  --accent:#2f5a46;
-  --accent-soft:#e3eadf;
-  --on-deep-muted:#f3d2bd;
+  --accent:#B5263E;
 }
+/* personal hero is light: blush with bordeaux type */
+.theme-personal .hero{background:var(--blush);color:var(--bordeaux);border:1px solid var(--line)}
+.theme-personal .hero .kicker{color:var(--crimson)}
+.theme-personal .hero p{color:var(--muted)}
 
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
 body{margin:0;background:var(--paper);color:var(--ink);font:17px/1.7 var(--sans);-webkit-font-smoothing:antialiased}
 a{color:inherit;text-underline-offset:.25em;text-decoration-thickness:1px}
-a:hover{color:var(--accent)}
+a:hover{color:var(--crimson)}
 a:focus-visible,button:focus-visible{outline:2px solid var(--accent);outline-offset:4px;border-radius:4px}
 img{max-width:100%;display:block}
 .wrap{width:min(980px,calc(100% - 40px));margin:auto}
@@ -63,13 +68,12 @@ p{margin:0 0 1em}
 .hero{background:var(--deep);color:var(--on-deep);border-radius:var(--radius);padding:clamp(30px,6vw,68px);margin:24px 0 38px;position:relative;overflow:hidden}
 .hero .kicker{color:var(--on-deep-muted)}
 .hero h1{margin:10px 0 0}
-.hero p{max-width:52ch;margin:16px 0 0;color:#e6e9dc;font-size:1.08rem}
-.theme-personal .hero p{color:#f8e6da}
+.hero p{max-width:52ch;margin:16px 0 0;color:#F2CFCF;font-size:1.08rem}
 .hero .links{display:flex;flex-wrap:wrap;gap:10px;margin-top:26px}
-.btn{display:inline-flex;align-items:center;gap:6px;padding:8px 16px;border-radius:999px;border:1px solid rgba(255,249,233,.35);text-decoration:none;font-size:.9rem;color:var(--on-deep)}
-.btn:hover{background:rgba(255,249,233,.12);color:var(--on-deep)}
+.btn{display:inline-flex;align-items:center;gap:6px;padding:8px 16px;border-radius:999px;border:1px solid rgba(251,228,227,.4);text-decoration:none;font-size:.9rem;color:var(--on-deep)}
+.btn:hover{background:rgba(251,228,227,.12);color:var(--on-deep)}
 .btn.solid{background:var(--on-deep);color:var(--deep);border-color:var(--on-deep)}
-.btn.solid:hover{background:#fff;color:var(--deep)}
+.btn.solid:hover{background:#fff;color:var(--ruby)}
 
 /* ---------- sections ---------- */
 section{padding:34px 0;border-top:1px solid var(--line);scroll-margin-top:12px}

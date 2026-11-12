@@ -23,6 +23,7 @@
     <a href="#code">Code</a>
     <a href="#talks">Talks</a>
     <a href="#cv">CV</a>
+    <a href="#contact">Contact</a>
   </nav>
   <div class="switch" role="navigation" aria-label="Switch side">
     <a href="./" aria-current="page">Academic</a><a href="../personal/">Personal</a>
@@ -36,8 +37,8 @@
   <h1>Rohith Gopinath</h1>
   <p>I study how to simulate quantum systems on classical computers, and what those simulations can be used for. My work spans tensor-network and Pauli-based methods, open quantum systems with memory (non-Markovian dynamics), and quantum machine learning, especially reservoir computing.</p>
   <div class="links">
-    <a class="btn solid" href="../cv/Rohith_Gopinath_CV.pdf">Download CV (PDF)</a>
-    <a class="btn" href="../cv/">View CV</a>
+    <a class="btn solid" href="../cv/Rohith_Gopinath_CV.pdf" target="_blank" rel="noopener">CV (PDF)</a>
+    <a class="btn" href="mailto:rohith.gopinath@iitb.ac.in">rohith.gopinath@iitb.ac.in</a>
     <a class="btn" href="https://github.com/TheRGopinath">GitHub ↗</a>
   </div>
 </div>
@@ -59,16 +60,18 @@
       <div class="kicker">Summer 2026 · “Indiana Fever”</div>
       <h3>Sparse Pauli propagation meets transfer tensors</h3>
       <p class="meta">with Prof. Nicholas Mayhall, Indiana University</p>
-      <p>I combined sparse Pauli propagation with the transfer tensor method, which learns a system's memory from short-time dynamics and uses it to predict long-time behaviour. I implemented it in Julia, checked it against direct reference calculations for the spin-boson model at low coupling, and analysed the errors from Trotterization, sparse truncation and finite memory. A manuscript is in preparation.</p>
+      <p>A framework that combines sparse Pauli propagation with the transfer tensor method. Short-time Heisenberg-picture trajectories are used to build subsystem dynamical maps, which then carry observables out to long times. I implemented it in Julia, including Pauli-subspace projection, transfer-tensor construction, and memory and stability diagnostics.</p>
+      <p>On spin-boson models it agrees with direct Pauli propagation and exact small-system references in the low-coupling regime. I also analysed the errors from Trotterization, sparse truncation and finite memory windows. A manuscript is in preparation.</p>
       <ul class="tags"><li>Non-Markovian dynamics</li><li>Pauli propagation</li><li>Julia</li></ul>
     </article>
 
     <article class="card">
       <div class="kicker">Semester project · 2026</div>
-      <h3>Thermalization and quantum chaos in the mixed-field Ising chain</h3>
+      <h3>Eigenstate thermalization and quantum chaos in spin chains</h3>
       <p class="meta">with Dr. Soumya Bera, IIT Bombay</p>
-      <p>Testing the eigenstate thermalization hypothesis (ETH) and signatures of quantum chaos in the mixed-field Ising chain, using exact diagonalization in Python.</p>
-      <ul class="tags"><li>ETH</li><li>Exact diagonalization</li><li>Python</li></ul>
+      <p>Exact diagonalization of the mixed-field Ising chain in Python, resolving its spin-flip and reflection symmetries. I tracked the crossover from Poisson to GOE level statistics as the longitudinal field is turned on.</p>
+      <p>I then tested the eigenstate thermalization hypothesis (ETH) through local observables, half-chain entanglement entropy, and how eigenstate fluctuations shrink with system size.</p>
+      <ul class="tags"><li>ETH</li><li>Random-matrix statistics</li><li>Exact diagonalization</li><li>Python</li></ul>
     </article>
   </div>
 </section>
@@ -81,21 +84,21 @@
       <div class="kicker">2026 · IIT Bombay</div>
       <h3>Ionic plasma thruster</h3>
       <p class="meta">with Dr. Maniraj Mahalingam · team project</p>
-      <p>Built a working ionic plasma thruster, including a high-voltage ZVS driver to power it.</p>
+      <p>Built an ionic plasma thruster from scratch, with a zero-voltage-switching driver and step-up stage to reach the high voltage needed from an ordinary supply. The finished prototype produced measurable thrust.</p>
       <ul class="tags"><li>Hardware</li><li>Plasma</li></ul>
     </article>
     <article class="card">
       <div class="kicker">2024 · IISER Thiruvananthapuram</div>
       <h3>Strange attractors</h3>
       <p class="meta">with Dr. Chandrakala Meena</p>
-      <p>Studied the nonlinear dynamics of twelve strange-attractor systems and compared Euler, RK2 and RK4 integrators.</p>
+      <p>Bifurcation and sensitivity analysis of twelve strange-attractor systems in Python, characterising periodic, quasiperiodic and chaotic regimes, and comparing how well Euler, RK2 and RK4 resolve the transitions.</p>
       <ul class="tags"><li>Chaos</li><li>Numerics</li></ul>
     </article>
     <article class="card">
       <div class="kicker">2024 · St Stephen's College</div>
       <h3>Operator theory in quantum mechanics</h3>
       <p class="meta">with Dr. Piyush Bansal, Dept. of Mathematics</p>
-      <p>Applications of operator theory to the mathematical foundations of quantum mechanics.</p>
+      <p>A guided study of self-adjoint operators, spectral decomposition and functional calculus, applied to Hamiltonians and the canonical commutation relations. Presented as the report <em>Operator Theory and Applications</em>.</p>
       <ul class="tags"><li>Functional analysis</li><li>Mathematical physics</li></ul>
     </article>
   </div>
@@ -131,16 +134,16 @@
 <section id="talks">
   <div class="section-head"><h2>Talks &amp; schools</h2></div>
   <ul class="timeline">
-    <li><span class="when">2026</span><span><strong>MWTCC56</strong>, University of Minnesota. Attended with the Mayhall group.</span></li>
-    <li><span class="when">2023</span><span><strong>IBM Quantum Global Summer School.</strong> Quantum Excellence Award for the top grade in a cohort of 5,000+.</span></li>
-    <li><span class="when">2023</span><span><strong>QIQT 2023</strong>, IISER Kolkata. Participant.</span></li>
-    <li><span class="when">2023</span><span><strong>Talk: “Objective collapse theories”</strong>, a review of GRW, CSL and Diósi–Penrose models. St Stephen's Physics Society.</span></li>
+    <li><span class="when">2026</span><span><strong>56th Midwest Theoretical Chemistry Conference (MWTCC56)</strong>, University of Minnesota, Minneapolis. Attended with the Mayhall group.</span></li>
+    <li><span class="when">2023</span><span><strong>IBM Global Summer School on Quantum Computing.</strong> Quantum algorithms and circuits on IBM Quantum hardware with Qiskit. Quantum Excellence Award for the highest grade in a cohort of 5,000+.</span></li>
+    <li><span class="when">2023</span><span><strong>4th International Conference on Quantum Information and Technology (QIQT)</strong>, IISER Kolkata. Lectures and tutorials across quantum information, optics, chemistry, foundations and materials.</span></li>
+    <li><span class="when">2023</span><span><strong>Talk: “Objective Collapse Theories and Interpretations of Quantum Mechanics”</strong>, Meera Memorial Paper Presentation, The Physics Society, St Stephen's College. A critical review of the measurement problem and the GRW, CSL and Diósi–Penrose models.</span></li>
   </ul>
 </section>
 
 <!-- ======================= CV / EDUCATION / AWARDS ======================= -->
 <section id="cv">
-  <div class="section-head"><h2>CV</h2><span><a class="pill-link" href="../cv/Rohith_Gopinath_CV.pdf">PDF</a> &nbsp; <a class="pill-link" href="../cv/">Web version</a></span></div>
+  <div class="section-head"><h2>CV</h2><span><a class="pill-link" href="../cv/Rohith_Gopinath_CV.pdf" target="_blank" rel="noopener">Open PDF ↗</a> &nbsp; <a class="pill-link" href="../cv/Rohith_Gopinath_CV.pdf" download>Download</a></span></div>
   <div class="cols">
     <div>
       <div class="kicker">Education</div>
@@ -154,8 +157,8 @@
       <ul class="timeline">
         <li><span class="when">2025</span><span>IIT JAM: All India Rank 10</span></li>
         <li><span class="when">2024</span><span>Erasmus Mundus Joint Master scholarship (NUCPHYS)</span></li>
-        <li><span class="when">2024</span><span>INSPIRE scholarship</span></li>
-        <li><span class="when">2023</span><span>IBM Quantum Excellence Award</span></li>
+        <li><span class="when">2024</span><span>INSPIRE Scholarship for Higher Education, DST, Government of India</span></li>
+        <li><span class="when">2023</span><span>Quantum Excellence Award, IBM Global Summer School</span></li>
       </ul>
     </div>
   </div>
@@ -163,6 +166,12 @@
     <div class="kicker">Teaching &amp; outreach</div>
     <p style="margin-top:8px">Taught physics and mathematics to high-school students from underprivileged backgrounds through the Social Service League, St Stephen's College (2023–24).</p>
   </div>
+</section>
+
+<section id="contact">
+  <div class="section-head"><h2>Contact</h2></div>
+  <p class="prose">I'm always happy to talk about quantum simulation, open systems or reservoir computing. The best way to reach me is by email.</p>
+  <p><a class="pill-link" href="mailto:rohith.gopinath@iitb.ac.in">rohith.gopinath@iitb.ac.in</a> &nbsp; <a class="pill-link" href="https://github.com/TheRGopinath">GitHub ↗</a></p>
 </section>
 
 </main>
