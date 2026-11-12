@@ -1,0 +1,122 @@
+/* ==========================================================
+   Rohith Gopinath — shared styles
+   Palette: cream paper, deep forest green, rust accent.
+   Academic pages use the green theme; personal pages use
+   the warm (rust) theme via <body class="theme-personal">.
+   ========================================================== */
+
+:root{
+  --paper:#f7f4eb;
+  --card:#fffcf4;
+  --ink:#24362c;
+  --muted:#5d6b61;
+  --line:#d8d5c6;
+  --deep:#294237;
+  --deep-2:#1b2d25;
+  --accent:#b65834;
+  --accent-soft:#f1e2d3;
+  --on-deep:#fff9e9;
+  --on-deep-muted:#d6dcb4;
+  --serif:"Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif;
+  --sans:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+  --mono:ui-monospace,"SF Mono",Menlo,Consolas,monospace;
+  --radius:12px;
+}
+.theme-personal{
+  --deep:#7a3a22;
+  --deep-2:#57281a;
+  --accent:#2f5a46;
+  --accent-soft:#e3eadf;
+  --on-deep-muted:#f3d2bd;
+}
+
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{margin:0;background:var(--paper);color:var(--ink);font:17px/1.7 var(--sans);-webkit-font-smoothing:antialiased}
+a{color:inherit;text-underline-offset:.25em;text-decoration-thickness:1px}
+a:hover{color:var(--accent)}
+a:focus-visible,button:focus-visible{outline:2px solid var(--accent);outline-offset:4px;border-radius:4px}
+img{max-width:100%;display:block}
+.wrap{width:min(980px,calc(100% - 40px));margin:auto}
+.skip{position:absolute;left:-9999px}
+.skip:focus{left:16px;top:16px;background:var(--card);padding:8px 12px;z-index:10}
+
+h1,h2,h3{font-family:var(--serif);line-height:1.08;font-weight:400;margin:0}
+h1{font-size:clamp(2.7rem,7vw,5rem);letter-spacing:-.035em}
+h2{font-size:clamp(2rem,5vw,3rem);letter-spacing:-.03em;margin:0 0 20px}
+h3{font-size:1.45rem;letter-spacing:-.01em}
+p{margin:0 0 1em}
+.kicker{font-size:.72rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--accent)}
+.muted{color:var(--muted)}
+.prose{max-width:66ch}
+
+/* ---------- top bar ---------- */
+.topbar{display:flex;flex-wrap:wrap;align-items:center;gap:10px 22px;padding:22px 0;border-bottom:1px solid var(--line);font-size:.9rem}
+.topbar .home{font-weight:700;text-decoration:none;margin-right:auto;letter-spacing:.04em}
+.topbar nav{display:flex;flex-wrap:wrap;gap:6px 20px}
+.switch{display:inline-flex;border:1px solid var(--line);border-radius:999px;padding:3px;background:var(--card);font-size:.8rem}
+.switch a{padding:3px 12px;border-radius:999px;text-decoration:none}
+.switch a[aria-current="page"]{background:var(--deep);color:var(--on-deep)}
+
+/* ---------- hero ---------- */
+.hero{background:var(--deep);color:var(--on-deep);border-radius:var(--radius);padding:clamp(30px,6vw,68px);margin:24px 0 38px;position:relative;overflow:hidden}
+.hero .kicker{color:var(--on-deep-muted)}
+.hero h1{margin:10px 0 0}
+.hero p{max-width:52ch;margin:16px 0 0;color:#e6e9dc;font-size:1.08rem}
+.theme-personal .hero p{color:#f8e6da}
+.hero .links{display:flex;flex-wrap:wrap;gap:10px;margin-top:26px}
+.btn{display:inline-flex;align-items:center;gap:6px;padding:8px 16px;border-radius:999px;border:1px solid rgba(255,249,233,.35);text-decoration:none;font-size:.9rem;color:var(--on-deep)}
+.btn:hover{background:rgba(255,249,233,.12);color:var(--on-deep)}
+.btn.solid{background:var(--on-deep);color:var(--deep);border-color:var(--on-deep)}
+.btn.solid:hover{background:#fff;color:var(--deep)}
+
+/* ---------- sections ---------- */
+section{padding:34px 0;border-top:1px solid var(--line);scroll-margin-top:12px}
+.section-head{display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:8px 20px;margin-bottom:6px}
+.section-head h2{margin-bottom:14px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,260px),1fr));gap:16px}
+.grid.two{grid-template-columns:repeat(auto-fit,minmax(min(100%,400px),1fr))}
+.card{background:var(--card);border:1px solid var(--line);border-radius:9px;padding:22px;display:flex;flex-direction:column;gap:10px}
+.card p{margin:0}
+.card .meta{font-size:.85rem;color:var(--muted)}
+.card .foot{margin-top:auto;padding-top:6px;display:flex;flex-wrap:wrap;gap:8px}
+.tags{display:flex;flex-wrap:wrap;gap:6px;list-style:none;padding:0;margin:0}
+.tags li{font-size:.75rem;padding:2px 10px;border-radius:999px;background:var(--accent-soft);color:var(--ink)}
+.pill-link{font-size:.85rem;text-decoration:none;border-bottom:1px solid currentColor}
+
+/* feature card (thesis) */
+.feature{background:var(--card);border:1px solid var(--line);border-left:4px solid var(--accent);border-radius:9px;padding:26px;margin-bottom:16px}
+.feature h3{font-size:1.8rem;margin:6px 0 10px}
+
+/* ---------- lists / timeline ---------- */
+.timeline{list-style:none;margin:0;padding:0}
+.timeline li{display:grid;grid-template-columns:120px 1fr;gap:4px 20px;padding:14px 0;border-bottom:1px dashed var(--line)}
+.timeline li:last-child{border-bottom:0}
+.timeline .when{font-size:.85rem;color:var(--muted);font-variant-numeric:tabular-nums;padding-top:2px}
+.timeline strong{font-weight:600}
+@media (max-width:560px){.timeline li{grid-template-columns:1fr}}
+
+.cols{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,280px),1fr));gap:28px}
+.plain{list-style:none;padding:0;margin:0}
+.plain li{padding:6px 0}
+
+/* ---------- empty state ---------- */
+.empty{border:1.5px dashed var(--line);border-radius:9px;padding:26px;color:var(--muted);background:transparent}
+.empty strong{color:var(--ink);font-family:var(--serif);font-weight:400;font-size:1.25rem;display:block;margin-bottom:4px}
+
+/* ---------- footer ---------- */
+footer.site{border-top:1px solid var(--line);padding:24px 0 44px;font-size:.85rem;display:flex;flex-wrap:wrap;gap:8px 24px;justify-content:space-between;color:var(--muted)}
+
+/* ---------- article (writing / recipe pages) ---------- */
+.article{max-width:68ch;margin:40px auto 60px}
+.article h1{font-size:clamp(2.3rem,6vw,3.6rem)}
+.article .byline{color:var(--muted);font-size:.9rem;margin:14px 0 34px}
+.article p{font-family:var(--serif);font-size:1.18rem;line-height:1.75}
+.article h2{font-size:1.9rem;margin:40px 0 14px}
+.article blockquote{margin:24px 0;padding:4px 0 4px 20px;border-left:3px solid var(--accent);font-style:italic}
+
+@media print{
+  .topbar,.switch,footer.site,.hero .links{display:none}
+  body{background:#fff}
+}

@@ -1,57 +1,135 @@
 <!doctype html>
 <html lang="en">
+<head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Rohith Gopinath</title>
+<meta name="description" content="Rohith Gopinath — physics student at IIT Bombay working on quantum simulation and quantum machine learning. Pick the academic or the personal side.">
+<meta property="og:title" content="Rohith Gopinath">
+<meta property="og:description" content="Quantum physics, code, philosophy and food. Pick a side.">
+<meta property="og:type" content="website">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
 <style>
 *{box-sizing:border-box}
-body{margin:0;background:#f7f4eb;color:#24362c;font:17px/1.7 system-ui,sans-serif}
-.wrap{width:min(1080px,calc(100% - 40px));margin:auto}
-a{color:inherit;text-underline-offset:.25em}
-a:focus-visible{outline:2px solid #b65834;outline-offset:5px}
-nav{display:flex;flex-wrap:wrap;gap:12px 24px;padding:24px 0;border-bottom:1px solid #cbcbbd;font-size:.9rem}
-nav strong{margin-right:auto}
-header{background:#203a30;color:#fff9e9;border-radius:18px;padding:clamp(28px,7vw,88px);margin:28px 0 56px}
-.kicker{font-size:.75rem;font-weight:700;letter-spacing:.19em;text-transform:uppercase}
-header .kicker{color:#d6dcb4}
-h1,h2,h3{font-family:Georgia,serif;line-height:1.05;font-weight:400;margin:0}
-h1{font-size:clamp(3rem,10vw,7rem);letter-spacing:-.06em}
-header p:last-child{max-width:44ch;margin:24px 0 0;color:#e0e5d5;font-size:1.15rem}
-section{padding:36px 0;border-top:1px solid #cbcbbd}
-h2{font-size:clamp(2.4rem,6vw,4rem);letter-spacing:-.04em;margin:10px 0 24px}
-.prose{max-width:66ch}
-.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,245px),1fr));gap:16px}
-article{background:#fffcf4;border:1px solid #d8d5c6;border-radius:14px;padding:24px}
-article .kicker{color:#8b432b}
-h3{font-size:1.8rem}
-article p:last-child{margin-bottom:0}
-footer{border-top:1px solid #cbcbbd;padding:24px 0 40px;font-size:.85rem}
-.wrap{width:min(980px,calc(100% - 40px))}
-header{background:#294237;border-radius:12px;padding:clamp(30px,6vw,68px);margin:24px 0 38px}
-h1{font-size:clamp(2.7rem,7vw,5rem);letter-spacing:-.045em}
-header p:last-child{font-size:1.05rem;margin-top:16px}
-section{padding:30px 0}
-h2{font-size:clamp(2rem,5vw,3rem);margin:0 0 20px}
-article{border-radius:9px;padding:20px}
-h3{font-size:1.5rem}
+html,body{height:100%}
+body{
+  margin:0;min-height:100%;display:flex;flex-direction:column;
+  font:17px/1.6 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+  color:#fff9e9;background:#1b2d25;
+  background-image:
+    radial-gradient(1200px 600px at 15% -10%,rgba(214,220,180,.16),transparent 60%),
+    radial-gradient(900px 600px at 110% 110%,rgba(182,88,52,.22),transparent 60%),
+    linear-gradient(rgba(255,249,233,.045) 1px,transparent 1px),
+    linear-gradient(90deg,rgba(255,249,233,.045) 1px,transparent 1px);
+  background-size:auto,auto,44px 44px,44px 44px;
+  -webkit-font-smoothing:antialiased;
+}
+.serif{font-family:"Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif;font-weight:400}
+header{padding:clamp(36px,8vh,84px) 20px 10px;text-align:center}
+.kicker{font-size:.72rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:#d6dcb4}
+h1{font-size:clamp(2.8rem,8vw,5.6rem);letter-spacing:-.04em;line-height:1;margin:14px 0 14px}
+.lede{margin:0 auto;max-width:46ch;color:#dfe4d3;font-size:1.08rem}
+
+main{flex:1;display:flex;align-items:center;justify-content:center;padding:28px 20px 40px}
+.choices{display:grid;grid-template-columns:repeat(2,minmax(0,380px));gap:clamp(22px,4vw,48px)}
+@media (max-width:760px){.choices{grid-template-columns:minmax(0,420px)}}
+
+/* the floating windows */
+.win{
+  display:block;text-decoration:none;color:#24362c;background:#fffcf4;
+  border-radius:14px;overflow:hidden;
+  box-shadow:0 30px 60px -20px rgba(0,0,0,.55),0 0 0 1px rgba(255,249,233,.15);
+  animation:float 7s ease-in-out infinite;
+  transition:transform .25s ease,box-shadow .25s ease;
+}
+.win.personal{animation-delay:-3.5s}
+.win:hover,.win:focus-visible{animation-play-state:paused;transform:translateY(-10px) rotate(0deg) scale(1.02);box-shadow:0 40px 80px -20px rgba(0,0,0,.65),0 0 0 2px #d6dcb4;outline:none}
+@keyframes float{
+  0%,100%{transform:translateY(0) rotate(-.6deg)}
+  50%{transform:translateY(-12px) rotate(.6deg)}
+}
+@media (prefers-reduced-motion:reduce){.win{animation:none}}
+
+.bar{display:flex;align-items:center;gap:7px;padding:11px 14px;background:#ece7d8;border-bottom:1px solid #d8d5c6;font:12px/1 ui-monospace,"SF Mono",Menlo,Consolas,monospace;color:#5d6b61}
+.bar i{width:11px;height:11px;border-radius:50%;background:#d4cfbf;display:inline-block}
+.bar i:nth-child(1){background:#e07a5f}.bar i:nth-child(2){background:#e9c46a}.bar i:nth-child(3){background:#81b29a}
+.bar span{margin-left:auto;margin-right:auto;transform:translateX(-20px)}
+
+.body{padding:26px 28px 28px}
+.body .tag{font-size:.7rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:#b65834}
+.personal .body .tag{color:#2f5a46}
+.body h2{font-size:2.3rem;letter-spacing:-.03em;margin:6px 0 8px;line-height:1.05}
+.body p{margin:0 0 18px;color:#5d6b61}
+.body ul{list-style:none;padding:0;margin:0 0 22px;display:grid;gap:7px}
+.body li{display:flex;gap:10px;align-items:baseline;font-size:.95rem}
+.body li::before{content:"";flex:none;width:6px;height:6px;border-radius:50%;background:#b65834;transform:translateY(-2px)}
+.personal .body li::before{background:#2f5a46}
+.enter{display:flex;justify-content:space-between;align-items:center;padding-top:16px;border-top:1px solid #e3dfd0;font-weight:600;font-size:.95rem}
+.enter kbd{font:11px ui-monospace,Menlo,Consolas,monospace;border:1px solid #d8d5c6;border-bottom-width:2px;border-radius:5px;padding:2px 6px;color:#5d6b61;font-weight:400}
+.arrow{transition:transform .2s}
+.win:hover .arrow{transform:translateX(5px)}
+.academic .bar{background:#294237;color:#d6dcb4;border-color:#294237}
+.personal .bar{background:#7a3a22;color:#f3d2bd;border-color:#7a3a22}
+
+footer{text-align:center;padding:0 20px 28px;font-size:.82rem;color:#aab49f}
+footer a{color:inherit}
+@media (hover:none){.enter kbd{display:none}}
 </style>
-<div class="wrap">
-<nav aria-label="Main navigation"><strong>RG</strong><a href="#about">About</a><a href="#projects">Projects</a><a href="#writing">Writing</a><a href="https://github.com/TheRGopinath">GitHub ↗</a></nav>
+</head>
+<body>
+<header>
+  <div class="kicker">Physics · Code · Philosophy · Food</div>
+  <h1 class="serif">Rohith Gopinath</h1>
+  <p class="lede">Two sides of the same person. Where would you like to start?</p>
+</header>
+
 <main>
-<header><h1>Rohith Gopinath</h1><p>A place for the things I’m curious about, the things I build, and the ideas I want to write through.</p></header>
-<section id="about"><h2>About</h2><div class="prose">
-<p>Hi, I’m Rohith. I like following a question until I can explain the answer in my own words or build something that lets me try it out.</p>
-<p>Quantum physics is one of the things I keep coming back to. I’m especially interested in what happens when you look at it through the lens of information and computation. My favorite part of working through a problem is the moment when the math starts to tell me what the system is actually doing.</p>
-<p>I also enjoy building a company! At ClosedSpace, we're building the next generation of human wellness.</p>
-<p>Away from the screen, I enjoy playing basketball, practising guitar, and cooking arguably better food than your grandma.</p>
-</div></section>
-<section id="projects"><h2>Projects</h2><div class="grid">
-<article><h3>Indiana Fever</h3><p>Using short-time simulations to study how open quantum systems evolve over longer times.</p></article>
-<article><h3>Bombay Magic</h3><p>Exploring how Clifford circuits and matrix product states can work together to represent quantum states more efficiently.</p></article>
-<article><h3>ClosedSpace</h3><p>My Startup.</p></article>
-</div></section>
-<section id="writing"><h2>Writing</h2><p class="prose">I’ll write mostly about philosophy. I want to use this space to work through questions I keep coming back to, put my own assumptions into words, and see how far an argument holds up when I take the time to write it out.</p></section>
+  <div class="choices">
+    <a class="win academic" href="academic/" aria-label="Academic: research, code and CV">
+      <div class="bar" aria-hidden="true"><i></i><i></i><i></i><span>academic.tex</span></div>
+      <div class="body">
+        <div class="tag">For colleagues &amp; committees</div>
+        <h2 class="serif">Academic</h2>
+        <p>Quantum simulation, open systems and quantum machine learning at IIT Bombay.</p>
+        <ul>
+          <li>Research &amp; projects</li>
+          <li>Code &amp; tools</li>
+          <li>Talks, awards &amp; CV</li>
+        </ul>
+        <div class="enter"><span>Enter <span class="arrow">→</span></span><kbd>A</kbd></div>
+      </div>
+    </a>
+
+    <a class="win personal" href="personal/" aria-label="Personal: writing, recipes and books">
+      <div class="bar" aria-hidden="true"><i></i><i></i><i></i><span>personal.md</span></div>
+      <div class="body">
+        <div class="tag">For friends &amp; the curious</div>
+        <h2 class="serif">Personal</h2>
+        <p>Essays I'm thinking through, food I cook, books I've read, and what I'm building.</p>
+        <ul>
+          <li>Writing on philosophy</li>
+          <li>The kitchen: recipes</li>
+          <li>The bookshelf</li>
+        </ul>
+        <div class="enter"><span>Enter <span class="arrow">→</span></span><kbd>P</kbd></div>
+      </div>
+    </a>
+  </div>
 </main>
-<footer>Rohith Gopinath</footer>
-</div>
+
+<footer>
+  <a href="https://github.com/TheRGopinath">GitHub</a> · © <span id="y">2026</span> Rohith Gopinath
+</footer>
+
+<script>
+  document.getElementById('y').textContent = new Date().getFullYear();
+  // Keyboard shortcuts: A → academic, P → personal
+  document.addEventListener('keydown', function (e) {
+    if (e.metaKey || e.ctrlKey || e.altKey) return;
+    var k = e.key.toLowerCase();
+    if (k === 'a') location.href = 'academic/';
+    if (k === 'p') location.href = 'personal/';
+  });
+</script>
+</body>
 </html>

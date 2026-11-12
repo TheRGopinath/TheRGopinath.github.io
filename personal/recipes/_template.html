@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<!-- TEMPLATE: copy this file to a new name (e.g. fish-curry.html), then edit the parts marked EDIT. -->
+<title>Dish name · Rohith's kitchen</title><!-- EDIT -->
+<meta name="robots" content="noindex"><!-- DELETE this line in your copy -->
+<link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="../../assets/site.css">
+<style>
+  .facts{display:flex;flex-wrap:wrap;gap:8px 26px;font-size:.9rem;color:var(--muted);margin:0 0 30px}
+  .facts b{color:var(--ink);font-weight:600}
+  .recipe{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.6fr);gap:36px}
+  @media (max-width:720px){.recipe{grid-template-columns:1fr}}
+  .recipe ul,.recipe ol{padding-left:20px;margin:0}
+  .recipe li{margin:0 0 10px}
+  .recipe h2{font-size:1.5rem;margin:0 0 14px}
+</style>
+</head>
+<body class="theme-personal">
+<div class="wrap">
+<header class="topbar">
+  <a class="home" href="../../">RG</a>
+  <nav><a href="../#kitchen">← All recipes</a></nav>
+</header>
+
+<article style="margin:40px 0 60px">
+  <div class="kicker">Recipe</div>
+  <h1 style="font-size:clamp(2.3rem,6vw,3.6rem);margin:8px 0 14px">Dish name</h1><!-- EDIT -->
+  <p class="prose">A line or two on where this dish comes from and why you make it.</p><!-- EDIT -->
+
+  <div class="facts"><!-- EDIT -->
+    <span><b>Serves</b> 4</span>
+    <span><b>Prep</b> 15 min</span>
+    <span><b>Cook</b> 30 min</span>
+  </div>
+
+  <div class="recipe">
+    <div>
+      <h2>Ingredients</h2>
+      <ul><!-- EDIT -->
+        <li>Ingredient, amount</li>
+        <li>Ingredient, amount</li>
+      </ul>
+    </div>
+    <div>
+      <h2>Method</h2>
+      <ol><!-- EDIT -->
+        <li>First step.</li>
+        <li>Second step.</li>
+      </ol>
+      <p class="muted" style="margin-top:20px"><b>Notes:</b> tips, swaps, what not to skip.</p><!-- EDIT -->
+    </div>
+  </div>
+</article>
+
+<footer class="site"><span>© Rohith Gopinath</span><a href="../#kitchen">← All recipes</a></footer>
+</div>
+</body>
+</html>

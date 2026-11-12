@@ -1,25 +1,34 @@
-# Rohith Gopinath
+# thergopinath.github.io
 
-A place for the things I’m curious about, the things I build, and the ideas I want to write through.
+Personal website of Rohith Gopinath, served by GitHub Pages at <https://thergopinath.github.io>.
 
-[About](#about) · [Projects](#projects) · [Writing](#writing) · [GitHub](https://github.com/TheRGopinath)
+Plain HTML and CSS: no build step and no Jekyll (`.nojekyll` is set). Edit a file, commit, and the site updates within a minute or two.
 
-## About
+## Layout
 
-Hi, I’m Rohith. I like following a question until I can explain the answer in my own words or build something that lets me try it out.
+| Path | What it is |
+|---|---|
+| `index.html` | Landing page with two floating cards, Academic and Personal (keyboard: `A` / `P`) |
+| `academic/index.html` | Research, other projects, code, talks, education, honours |
+| `cv/index.html` | Web CV (prints cleanly to A4) |
+| `cv/Rohith_Gopinath_CV.pdf` | CV PDF linked from the site; replace it with your own PDF under the same name |
+| `personal/index.html` | Now, writing, kitchen (recipes), bookshelf, ClosedSpace |
+| `personal/writing/_template.html` | Copy this to start a new essay |
+| `personal/recipes/_template.html` | Copy this to start a new recipe |
+| `assets/site.css` | Shared styles (green theme = academic, rust theme = personal) |
+| `404.html` | Not-found page |
 
-Quantum physics is one of the things I keep coming back to. I’m especially interested in what happens when you look at it through the lens of information and computation. My favorite part of working through a problem is the moment when the math starts to tell me what the system is actually doing.
+## Adding things
 
-I also enjoy building a company! At ClosedSpace, we're building the next generation of human wellness.
+- **Essay:** copy `personal/writing/_template.html` to `personal/writing/<name>.html` and fill it in. Then copy the commented card template in the Writing section of `personal/index.html` and point it at the new file.
+- **Recipe:** same steps, using `personal/recipes/_template.html` and the Kitchen section.
+- **Book:** copy the commented `<li>` template in the Bookshelf section into the `<ul class="books">` list.
+- **Code repo:** copy the commented card template in the Code section of `academic/index.html`.
 
-Away from the screen, I enjoy playing basketball, practising guitar, and cooking arguably better food than your grandma.
+Each section shows an "empty" box until its first item is added. Delete that box when you add one.
 
-## Projects
+## Regenerating the CV PDF
 
-- **Transfer Tensors** — Using short-time simulations to study how open quantum systems evolve over longer times.
-- **CAMPS** — Exploring how Clifford circuits and matrix product states can work together to represent quantum states more efficiently.
-- **ClosedSpace** — My Startup.
-
-## Writing
-
-I’ll write mostly about philosophy. I want to use this space to work through questions I keep coming back to, put my own assumptions into words, and see how far an argument holds up when I take the time to write it out.
+```bash
+google-chrome --headless --no-pdf-header-footer --print-to-pdf=cv/Rohith_Gopinath_CV.pdf cv/index.html
+```

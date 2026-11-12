@@ -1,0 +1,177 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Rohith Gopinath · Academic</title>
+<meta name="description" content="Rohith Gopinath, M.Sc. Physics at IIT Bombay. Research on Clifford-augmented MPS, quantum reservoir computing, sparse Pauli propagation and non-Markovian open quantum systems.">
+<meta property="og:title" content="Rohith Gopinath · Academic">
+<meta property="og:description" content="Quantum simulation, open quantum systems and quantum machine learning at IIT Bombay.">
+<meta property="og:type" content="profile">
+<link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="../assets/site.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<div class="wrap">
+
+<header class="topbar">
+  <a class="home" href="../">RG</a>
+  <nav aria-label="Sections">
+    <a href="#research">Research</a>
+    <a href="#projects">Projects</a>
+    <a href="#code">Code</a>
+    <a href="#talks">Talks</a>
+    <a href="#cv">CV</a>
+  </nav>
+  <div class="switch" role="navigation" aria-label="Switch side">
+    <a href="./" aria-current="page">Academic</a><a href="../personal/">Personal</a>
+  </div>
+</header>
+
+<main id="main">
+
+<div class="hero">
+  <div class="kicker">M.Sc. Physics · IIT Bombay</div>
+  <h1>Rohith Gopinath</h1>
+  <p>I study how to simulate quantum systems on classical computers, and what those simulations can be used for. My work spans tensor-network and Pauli-based methods, open quantum systems with memory (non-Markovian dynamics), and quantum machine learning, especially reservoir computing.</p>
+  <div class="links">
+    <a class="btn solid" href="../cv/Rohith_Gopinath_CV.pdf">Download CV (PDF)</a>
+    <a class="btn" href="../cv/">View CV</a>
+    <a class="btn" href="https://github.com/TheRGopinath">GitHub ↗</a>
+  </div>
+</div>
+
+<!-- ======================= RESEARCH ======================= -->
+<section id="research">
+  <div class="section-head"><h2>Research</h2><span class="muted">Current and recent</span></div>
+
+  <article class="feature">
+    <div class="kicker">M.Sc. thesis · 2026–present · “Bombay Magic”</div>
+    <h3>Clifford-augmented matrix product states for quantum reservoir computing</h3>
+    <p class="muted">with Dr. Sai Vinjanampathy, IIT Bombay</p>
+    <p class="prose">Matrix product states (MPS) are good at representing low-entanglement states, and Clifford circuits can be simulated efficiently on a classical computer. Clifford-augmented MPS (CAMPS) combine the two: entanglement that a Clifford circuit can account for is moved out of the MPS, which keeps the tensor network small. I'm building a quantum reservoir computer on top of this representation: designing the reservoir, the input encoding and the readout observables, and benchmarking it.</p>
+    <ul class="tags"><li>CAMPS</li><li>Tensor networks</li><li>Stabilizer formalism</li><li>Quantum reservoir computing</li></ul>
+  </article>
+
+  <div class="grid two">
+    <article class="card">
+      <div class="kicker">Summer 2026 · “Indiana Fever”</div>
+      <h3>Sparse Pauli propagation meets transfer tensors</h3>
+      <p class="meta">with Prof. Nicholas Mayhall, Indiana University</p>
+      <p>I combined sparse Pauli propagation with the transfer tensor method, which learns a system's memory from short-time dynamics and uses it to predict long-time behaviour. I implemented it in Julia, checked it against direct reference calculations for the spin-boson model at low coupling, and analysed the errors from Trotterization, sparse truncation and finite memory. A manuscript is in preparation.</p>
+      <ul class="tags"><li>Non-Markovian dynamics</li><li>Pauli propagation</li><li>Julia</li></ul>
+    </article>
+
+    <article class="card">
+      <div class="kicker">Semester project · 2026</div>
+      <h3>Thermalization and quantum chaos in the mixed-field Ising chain</h3>
+      <p class="meta">with Dr. Soumya Bera, IIT Bombay</p>
+      <p>Testing the eigenstate thermalization hypothesis (ETH) and signatures of quantum chaos in the mixed-field Ising chain, using exact diagonalization in Python.</p>
+      <ul class="tags"><li>ETH</li><li>Exact diagonalization</li><li>Python</li></ul>
+    </article>
+  </div>
+</section>
+
+<!-- ======================= OTHER PROJECTS ======================= -->
+<section id="projects">
+  <div class="section-head"><h2>Other projects</h2></div>
+  <div class="grid">
+    <article class="card">
+      <div class="kicker">2026 · IIT Bombay</div>
+      <h3>Ionic plasma thruster</h3>
+      <p class="meta">with Dr. Maniraj Mahalingam · team project</p>
+      <p>Built a working ionic plasma thruster, including a high-voltage ZVS driver to power it.</p>
+      <ul class="tags"><li>Hardware</li><li>Plasma</li></ul>
+    </article>
+    <article class="card">
+      <div class="kicker">2024 · IISER Thiruvananthapuram</div>
+      <h3>Strange attractors</h3>
+      <p class="meta">with Dr. Chandrakala Meena</p>
+      <p>Studied the nonlinear dynamics of twelve strange-attractor systems and compared Euler, RK2 and RK4 integrators.</p>
+      <ul class="tags"><li>Chaos</li><li>Numerics</li></ul>
+    </article>
+    <article class="card">
+      <div class="kicker">2024 · St Stephen's College</div>
+      <h3>Operator theory in quantum mechanics</h3>
+      <p class="meta">with Dr. Piyush Bansal, Dept. of Mathematics</p>
+      <p>Applications of operator theory to the mathematical foundations of quantum mechanics.</p>
+      <ul class="tags"><li>Functional analysis</li><li>Mathematical physics</li></ul>
+    </article>
+  </div>
+</section>
+
+<!-- ======================= CODE ======================= -->
+<section id="code">
+  <div class="section-head"><h2>Code</h2><a class="pill-link" href="https://github.com/TheRGopinath">All repositories on GitHub ↗</a></div>
+  <div class="grid">
+    <!--
+      To add a repository, copy this block, fill it in, and delete the empty-state box below.
+      <article class="card">
+        <div class="kicker">Julia</div>
+        <h3>repo-name</h3>
+        <p>One sentence on what it does.</p>
+        <div class="foot"><a class="pill-link" href="https://github.com/TheRGopinath/repo-name">Code ↗</a></div>
+      </article>
+    -->
+    <div class="empty">
+      <strong>Code from these projects is on its way.</strong>
+      Repositories for the transfer-tensor and CAMPS work will be linked here as they're released.
+    </div>
+    <article class="card">
+      <div class="kicker">Toolkit</div>
+      <h3>What I work in</h3>
+      <p><strong>Languages:</strong> Julia, Python, Fortran</p>
+      <p><strong>Also:</strong> Mathematica, Git, Linux &amp; Bash, SLURM/HPC clusters, LaTeX</p>
+    </article>
+  </div>
+</section>
+
+<!-- ======================= TALKS ======================= -->
+<section id="talks">
+  <div class="section-head"><h2>Talks &amp; schools</h2></div>
+  <ul class="timeline">
+    <li><span class="when">2026</span><span><strong>MWTCC56</strong>, University of Minnesota. Attended with the Mayhall group.</span></li>
+    <li><span class="when">2023</span><span><strong>IBM Quantum Global Summer School.</strong> Quantum Excellence Award for the top grade in a cohort of 5,000+.</span></li>
+    <li><span class="when">2023</span><span><strong>QIQT 2023</strong>, IISER Kolkata. Participant.</span></li>
+    <li><span class="when">2023</span><span><strong>Talk: “Objective collapse theories”</strong>, a review of GRW, CSL and Diósi–Penrose models. St Stephen's Physics Society.</span></li>
+  </ul>
+</section>
+
+<!-- ======================= CV / EDUCATION / AWARDS ======================= -->
+<section id="cv">
+  <div class="section-head"><h2>CV</h2><span><a class="pill-link" href="../cv/Rohith_Gopinath_CV.pdf">PDF</a> &nbsp; <a class="pill-link" href="../cv/">Web version</a></span></div>
+  <div class="cols">
+    <div>
+      <div class="kicker">Education</div>
+      <ul class="timeline">
+        <li><span class="when">2027 (exp.)</span><span><strong>M.Sc. Physics</strong><br><span class="muted">IIT Bombay</span></span></li>
+        <li><span class="when">2024</span><span><strong>B.Sc. (Hons) Physics</strong><br><span class="muted">St Stephen's College, University of Delhi</span></span></li>
+      </ul>
+    </div>
+    <div>
+      <div class="kicker">Honours</div>
+      <ul class="timeline">
+        <li><span class="when">2025</span><span>IIT JAM: All India Rank 10</span></li>
+        <li><span class="when">2024</span><span>Erasmus Mundus Joint Master scholarship (NUCPHYS)</span></li>
+        <li><span class="when">2024</span><span>INSPIRE scholarship</span></li>
+        <li><span class="when">2023</span><span>IBM Quantum Excellence Award</span></li>
+      </ul>
+    </div>
+  </div>
+  <div style="margin-top:24px">
+    <div class="kicker">Teaching &amp; outreach</div>
+    <p style="margin-top:8px">Taught physics and mathematics to high-school students from underprivileged backgrounds through the Social Service League, St Stephen's College (2023–24).</p>
+  </div>
+</section>
+
+</main>
+
+<footer class="site">
+  <span>© <span class="y">2026</span> Rohith Gopinath</span>
+  <span><a href="https://github.com/TheRGopinath">GitHub</a> · <a href="../personal/">Personal side →</a></span>
+</footer>
+</div>
+<script>document.querySelectorAll('.y').forEach(function(e){e.textContent=new Date().getFullYear()})</script>
+</body>
+</html>
